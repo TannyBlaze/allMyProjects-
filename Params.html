@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Params</title>
+</head>
+<body>
+    <button onclick="sayHello()">Say</button>
+    <button onclick="sayHello('Damilare',28)">Say Damilare</button>
+    <button onclick="sayHello('Monsurat',22)">Say Monsurat</button>
+    <button onclick="sayHello('Peace', 19)">Say Peace</button>
+
+    <script>
+        function sayHello(name='John Doe',myAge=0) {
+            alert(`Hello! ${name} here, my age is ${myAge}`);
+        }
+    </script>
+</body>
+</html>

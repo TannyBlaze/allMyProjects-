@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light Bulb</title>
+    
+</head>
+
+<body>
+        <img src='C:\Users\Hp\Documents\BULB\Off bulb.jfif' id="bulb" width="200">
+        <div>
+            <button onclick="bulbOn()">ON</button>
+            <button onclick="bulbOff()">OFF</button>
+        </div>
+    <script>
+        function bulbOn(){
+            document.getElementById('bulb').src='C:\Users\Hp\Documents\BULB\On bulb.jfif';
+        }
+        function bulbOff(){
+            document.getElementById('bulb').src='C:\Users\Hp\Documents\BULB\Off bulb.jfif';
+        }
+    </script>
+  </body>
+</html>

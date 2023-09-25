@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <input type="text" id="inp">
+    <button onclick="fetchInfo()">Fetch</button>
+</head>
+<body>
+    <script>
+        class Country {
+            constructor(name,continent) {
+                this.name = name
+                this.continent = continent
+            }
+        };
+        // let Nigeria = new Country("Nigeria", "Abuja", "Nigrian Naira", `223,804,632`, "English")
+        // let Angola = new Country("Angola", "Luanda", "Angolan kwanza", ` 30,774,205`, "Portuguese")
+        // let Algeria = new Country("Algeria", "Algiers", "Algerian dinar", `42 008 054`, "Arabic")
+        // let Argentina = new Country("Argentina", "Buenos Aires", "Argentine peso ", `44 688 864`, "Spanish")
+        // let Australia = new Country("Australia", "Canberra", "Algerian dinar", ` 42 008 054`, "Arabic")
+        // const fetchInfo = () => {
+        //     let cnty = `https://countryapi.io/api/name/austria?apikey=8uLFmuGButl4DxM5WNYkYDaNvzOK8ocjDQmaxRbz`
+        //     fetch(cnty)
+        //     .then(response=>response.json())
+        //     .then((result)=>{
+        //        console.log(result.capital);
+        //     })
+        //     .catch((err)=>{
+        //         console.log(err)
+        //     })
+        // }
+        const fetchInfo = () => {
+            let wth = `https://api.openweathermap.org/data/2.5/weather?q=${inp.value}&appid=0897c04e6c79a34a5cace4f27864df38&units=metric`
+            fetch(wth)
+            .then(response=>response.json())
+            .then((result)=>{
+                let lon = result.coord.lon
+                console.log(result.coord.lon)
+                let lat = result.coord.lat
+                let cnty = `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${lon}&longitude=${lat}`
+                fetch(cnty)
+                .then(response=>response.json())
+                .then((result)=>{
+                    console.log(result.continent);
+                    console.log(result.localityInfo.administrative[0].name)
+                })
+                .catch((err)=>{
+                    console.log(err)
+                })
+            })
+            .catch((err)=>{
+                console.log(err)
+            })
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odd/Even And Fizz/Buzz</title>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.css" rel="stylesheet" />
+    <!-- MDB -->
+    <script ttype="text/javascript" src="htps://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.js"></script>
+</head>
+<body class="bg-secondary">
+    <div class="">
+        <input type="number" id="inp"><br>
+        <button onclick="oe()" class="btn btn-success">Odd/Even</button>
+        <button onclick="fb()" class="btn btn-danger">Fizz/Buzz</button>
+        <button onclick="re()" class="btn btn-primary">Reset</button>
+        <div id="show" class=""></div>
+    </div>
+    
+    <script>
+        if (inp.value <= 0) {
+               inp.value = 1
+            }
+        function oe() {
+            for (let i = 1; i <= inp.value ; i++) {
+                i%2==0?show.innerHTML+=`<div>${i} I am even</div>`:show.innerHTML+=`<div>${i} I am odd</div>`;
+            }
+        }
+        function fb() {
+            for (let i = 1; i <= inp.value ; i++) {
+                if (i%3==0 && i%5==0) {
+                    show.innerHTML+=`<div style='color:orange'>${i} I am FizzBuzz</div>`
+                }else if (i%3==0) {
+                    show.innerHTML+=`<div style='color:green'>${i} I am Fizz</div>`
+                } else if(i%5==0) {
+                    show.innerHTML+=`<div style='color:yellow'>${i} I am Buzz</div>`           
+                }else {
+                    show.innerHTML+=`<div style='color:red'>${i} I am not among</div>`
+                }
+            }
+        }
+        function re() {
+            show.innerHTML = ''
+        }
+        
+    </script>
+</body>
+</html>

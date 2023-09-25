@@ -1,0 +1,16 @@
+.button{
+    width: 47px;
+    background-color: lightskyblue;
+}
+.main{
+    background-color: dodgerblue;
+    margin-left: 43%;
+    margin-top: 200px;
+    padding: 43px;
+    border-radius: 10px;
+    width: 290px;
+}
+.show{
+ background-color: whitesmoke; 
+ height: 30px;  
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="Calculator.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.css" rel="stylesheet" />
+    <!-- MDB -->
+    <script ttype="text/javascript" src="htps://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.js"></script>
+</head>
+<div class="main">
+    <input id="first" type="number" placeholder="Enter first number"><br>
+    <input id="second" type="number" placeholder="Enter second number"><br>
+    <button class='button' onclick="b1()">*</button>
+    <button class='button' onclick="b2()">-</button>
+    <button class='button' onclick="b3()">+</button>
+    <button class='button' onclick="b4()">/</button>
+    <div id="show" class="show"></div>
+</div>
+<body>
+    <script>
+        function b1() {
+           var m1 = Number(first.value) * Number(second.value);
+            show.innerHTML = m1
+        }
+        function b2() {
+           var m2 = Number(first.value) - Number(second.value);
+           show.innerHTML = m2
+        }
+        function b3() {
+           var m3 = Number(first.value) + Number(second.value);
+           show.innerHTML = m3
+        }
+        function b4() {
+           var m4 = Number(first.value) / Number(second.value);
+           show.innerHTML = m4.toFixed(2)
+        }
+    </script>
+</body>
+</html>

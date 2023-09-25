@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // OOP
+        // Abstraction, Polymorphism, Encapsulation, Inheritance
+
+        class Car {
+            constructor(owner,color,brand) {
+                this.owner = owner
+                this.color = color
+                this.brand = brand
+            }
+            move() {
+                return `The owner of the car is ${this.owner} and the 
+                colour is ${this.color} and the brand is ${this.brand}`
+            }
+        };
+
+        let car1 = new Car("Tunmise", "Wine", "Tesla")
+        let car2 = new Car("Tunde", "Blue", "Benz")
+        let car1m = car1.move()
+        console.log(car1m);
+        console.log(car1, car2);
+
+        class Truck extends Car{
+            constructor(owner,color,brand,trailer) {
+                super(owner,color,brand)
+                this.trailer = trailer
+            }
+        }
+        
+        let truck1 = new Truck("Damilare", "Black", "Mac", true)
+        console.log(truck1)
+    </script>
+</body>
+</html>

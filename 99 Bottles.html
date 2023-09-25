@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>99 Bottles Of Beer</title>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.css" rel="stylesheet" />
+    <!-- MDB -->
+    <script ttype="text/javascript" src="htps://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.js"></script>
+</head>
+<body class="bg-light">
+    <div id="beer" class="text-info"></div>
+    <script>
+        for (let i = 99; i >= 0; i--) {
+            let b = i-1
+            if (b == -1) {
+                b = 99
+            }else if (b == 0) {
+                b = 'No'
+            }
+            if (i == 0) {
+                i = 'No'
+                beer.innerHTML += `<h4>${i} bottles of beer on the wall,${i} bottles of beer.<br>Go to the store and buy some more, ${b} bottles of beer on the wall.</h4>`
+            }else if (i > 0 ) {
+                beer.innerHTML += `<h4>${i} bottles of beer on the wall,${i} bottles of beer.<br>Take one down and pass it around, ${b} bottles of beer on the wall.</h4>`
+            }
+            
+        }
+    </script>
+</body>
+</html> 

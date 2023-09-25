@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <div>
+      <input type="text"  id="items" placeholder="Item"><br>
+      <input type="text" id="price" placeholder="Price"><br>
+      <input type="text"  id="quantity" placeholder="Quantity"><br>
+      <button onclick="add()">Add Item</button>
+      <button onclick="get()">Check Items</button>
+  </div> 
+<script>
+    var allProducts = []
+    if (localStorage.product) {
+      allProducts = JSON.parse(localStorage.getItem('product'))
+    }
+
+    function add(){ 
+      product = {
+        first : items.value,
+        second: price.value,
+        third: quantity.value,
+      }
+      allProducts.push(product)
+      localStorage.setItem("product",JSON.stringify(allProducts))
+      console.log(allProducts);
+      items.value = ''
+      price.value = ''
+      quantity.value = ''
+    }
+    function get() {
+      location.href = "main.html"
+    }
+</script>
+</body>
+</html>

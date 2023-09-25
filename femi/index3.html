@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello everyone</h1>
+    <button onclick="go()">Go to a new page</button>
+
+    <script>
+        // function go(){
+         
+        //     if (inputs !=''){
+        //         window.location.href = '/Robot/mini student.html'
+        //     }
+        //     else{
+        //         window.location.href = '/Robot/to do.html'
+        //     }
+        // }
+
+        var javascriptStudents = [
+            {
+                username: "Clement",
+                age: 973,
+                isWearingGlasses: true,
+                complexion: "rabbit yellow"
+            },
+            {
+            username: "Obi",
+                age: 4973,
+                isWearingGlasses: true,
+                complexion: "caramel chocolate"
+            },
+            {
+            username: "Moses",
+                age: 4973,
+                isWearingGlasses: true,
+                complexion: "caramel chocolate"
+            },
+        ]
+      //  console.log(javascriptStudents[0].username);
+        localStorage.setItem('Agba-awo',JSON.stringify(javascriptStudents))
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+.main{
+    text-align: center;
+    margin-top: 50px;
+    color: #7F056E;
+}
+.mainInput{
+    text-align: center;
+    width: 30%;
+    display: inline;
+    border-radius: 10px;
+}
+.button{
+    width: 14.9%;
+    margin-top: 10px;
+    border-radius: 20px;
+    background-color: #C09247;
+    border: #C09247 solid 2px;
+    color: #CAB387;
+}
+.button:hover{
+    color: #C09247;
+    background-color: #CAB387;
+    border: #C09247 solid 2px;
+    transition: 1s;
+    scale: 1.1;
+}
+.button:active{
+    scale: 0.9;
+    transition: 0.8s;
+    opacity: 90%;
+}
+.button:not(:hover){
+    transition: 1s;
+}
+.output{
+    color: #C09247;
+    margin-top: 30px;
+}
